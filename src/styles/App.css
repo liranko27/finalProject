@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+:root {
+    --green: #008000;
+    --yellow: #FFD300;
+    --lightgray: #a6a6a6;
+    --white: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+li {
+    padding: 0 2rem;
+    text-decoration: none;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* prefix  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
