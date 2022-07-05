@@ -6,11 +6,11 @@ function ProductPage() {
   return (
     <>
       <Navbar></Navbar>
-      <main class="product">
-        <div class="product-img">BS-Slider</div>
-        <div class="product-deatils">
+      <main className="product">
+        <div className="product-img">BS-Slider</div>
+        <div className="product-deatils">
           <h2>Product Name</h2>
-          <div class="product-desc">
+          <div className="product-desc">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
               nam, velit rem autem, minima voluptates at nulla quidem quibusdam
@@ -33,10 +33,10 @@ function ProductPage() {
                 </div>
               </div>
             </div>
-            <div class="product-btns">
-              <button class="product-buy">Buy it now</button>
-              <button class="product-cart">Add to cart</button>
-              <button class="product-wish">Add to wishlist</button>
+            <div className="product-btns">
+              <button className="product-buy">Buy it now</button>
+              <button className="product-cart">Add to cart</button>
+              <button className="product-wish">Add to wishlist</button>
             </div>
           </div>
         </div>
