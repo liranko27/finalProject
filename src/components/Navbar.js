@@ -3,6 +3,7 @@ import logo from "../images/logo.png";
 import "../styles/navbar.css";
 import NavLinks from "./NavLinks";
 import CartMenu from "./CartMenu";
+import LoginForm from "./LoginForm";
 import HamburgerMenu from "./HamburgerMenu";
 
 function Navbar() {
@@ -14,7 +15,14 @@ function Navbar() {
           <NavLinks />
         </div>
         <div className="nav-right">
-          <CartMenu />
+          <div className="cart">
+            cart <span className="cart_amount">2</span>
+            <CartMenu />
+          </div>
+          <a className="signin" href="/">
+            sign in/Register
+          </a>
+          <LoginForm />
           <div className="search">
             <input type="text" className="search" />
             <button className="search-btn">search</button>
