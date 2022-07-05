@@ -188,6 +188,8 @@ footer {
     margin-top: 1rem;
 }
 
+
+
 @media(max-width:850px) {
     aside {
         display: none;

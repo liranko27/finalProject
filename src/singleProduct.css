@@ -3,12 +3,13 @@
 .product {
     margin-top: 12vh;
     display: flex;
+    height: 40vh;
 }
 
 
 .product-img {
     background-color: gray;
-    flex: 1 0 50%;
+    flex: 1 0 25%;
     margin: 0 2rem;
     border-radius: 10px;
 }

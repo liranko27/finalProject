@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import './style.css'
 import './singleProduct.css'
 function ProductPage() {
@@ -26,7 +27,7 @@ function ProductPage() {
             </div>
         </div>
     </main>
-    <footer>footer</footer>
+    <Footer></Footer>
     </>
   )
 }
