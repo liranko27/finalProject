@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/LoginForm.css";
 function LoginForm() {
   return (
     <div id="loginform" className="login-form hidden">

@@ -16,7 +16,11 @@
 .hidden {
     display: none;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+    padding:0 .4rem;
+}
 ul {
     list-style: none;
 }

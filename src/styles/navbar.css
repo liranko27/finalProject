@@ -27,6 +27,9 @@
     align-items: center;
     justify-content: space-around;
 }
+.signin {
+    position: relative;
+}
 
 .search {
     padding: .3rem 0;
@@ -46,6 +49,7 @@
 .cart {
     justify-self: flex-end;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .cart_amount {
@@ -69,7 +73,15 @@
     .links {
         display: none;
     }
-
+    .cart{
+        display: none;
+    }
+    .signin{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
     .hamburger-btn {
         margin: auto 0;
         width: 30px;
