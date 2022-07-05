@@ -7,11 +7,11 @@ function LoginForm() {
         <h4>Sign in</h4>
         <form>
           <div>
-            <label for="username">Username</label>
+            <label>Username</label>
             <input type="text" name="username" />
           </div>
           <div>
-            <label for="password">Password</label>
+            <label>Password</label>
             <input type="password" name="password" />
           </div>
 
