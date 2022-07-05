@@ -1,0 +1,37 @@
+/* Single product Page */
+/* / */
+.product {
+    margin-top: 12vh;
+    display: flex;
+}
+
+
+.product-img {
+    background-color: gray;
+    flex: 1 0 50%;
+    margin: 0 2rem;
+    border-radius: 10px;
+}
+
+.product-desc {
+    margin: 0 1rem;
+
+}
+
+.product-desc>p {
+    max-height: 200px;
+    overflow: scroll;
+
+}
+
+.product-buy {
+    padding: 1rem 2rem
+}
+
+.product-cart {
+    padding: 1rem 2rem
+}
+
+.product-wish {
+    padding: 1rem 2rem
+}
