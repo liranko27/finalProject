@@ -1,87 +1,3 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-}
-
-:root {
-    --green: #008000;
-    --yellow: #FFD300;
-}
-
-ul {
-    list-style: none;
-}
-
-.navbar {
-    display: flex;
-    z-index: 999;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    height: auto;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-}
-
-.nav-logo {
-    width: 80px;
-}
-
-.nav-left {
-    margin-left: 2rem;
-    display: flex;
-    align-items: center;
-}
-
-.nav-right {
-    margin-right: 2rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.search {
-    padding: .3rem 0;
-}
-
-.search-btn {
-    padding: .3rem 1rem;
-}
-
-.links {
-    display: flex;
-    list-style: none;
-}
-
-li {
-    padding: 0 2rem;
-    text-decoration: none;
-}
-
-li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: black;
-}
-
-.cart {
-    justify-self: flex-end;
-    font-size: 1.5rem;
-}
-
-.cart_amount {
-    border-radius: 50%;
-    background-color: red;
-    color: white;
-    padding: .1rem .5rem;
-    font-size: 1rem;
-    margin-right: 1rem;
-}
-
 .container {
     display: flex;
     width: 100%;
@@ -181,80 +97,7 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
-footer {
-    width: 100%;
-    background-color: cadetblue;
-    text-align: center;
-    margin-top: 1rem;
-}
 
-
-
-@media(max-width:850px) {
-    aside {
-        display: none;
-    }
-
-    .products {
-        justify-content: center;
-    }
-
-    .links {
-        display: none;
-    }
-
-    .nav-right {
-        width: 80%;
-    }
-
-    .hamburger-btn {
-        margin: auto 0;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-    }
-
-    .hamburger-btn::before {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        transform: translateY(-8px)
-    }
-
-    .hamburger-btn::after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        transform: translateY(5px)
-    }
-
-
-}
-
-
-
-@media (max-width:700px) {
-    .product {
-        display: block;
-    }
-
-    .product-img {
-        height: 250px;
-    }
-
-    .search {
-        display: none;
-    }
-
-    .search-btn {
-        display: none;
-    }
-
-}
 
 .signin {
     position: relative;
@@ -272,12 +115,6 @@ footer {
     padding: 2rem;
 }
 
-.hidden {
-    display: none;
-}
-
-
-
 .hamburger-menu {
     background: #fff;
     position: absolute;
@@ -288,9 +125,6 @@ footer {
     transform: translateY(100%);
     border: 2px solid;
 }
-
-
-
 
 .profile-btn {
     position: relative;
@@ -306,7 +140,6 @@ footer {
     border: 2px solid;
     border-radius: 10px;
 }
-
 
 .cart-menu {
     position: absolute;
