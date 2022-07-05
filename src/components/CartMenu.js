@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/CartMenu.css";
 
 function CartMenu() {
   return (
-    <div className="cart ">
+    <div className="cart hidden">
       cart <span className="cart_amount">2</span>
-      <div className="cart-menu hidden">
+      <div className="cart-menu ">
         <h1>cart</h1>
         <section className="cart-products">
           <div className="cart-product">

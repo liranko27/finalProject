@@ -3,6 +3,7 @@ import logo from "../images/logo.png";
 import "../styles/navbar.css";
 import NavLinks from "./NavLinks";
 import CartMenu from "./CartMenu";
+import HamburgerMenu from "./HamburgerMenu";
 
 function Navbar() {
   return (
@@ -20,9 +21,7 @@ function Navbar() {
           </div>
 
           <div className="hamburger-btn">
-            <div className="hamburger-menu hidden">
-              <h1>Menu</h1>
-            </div>
+            <HamburgerMenu />
           </div>
         </div>
       </nav>
