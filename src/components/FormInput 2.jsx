@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import "../styles/FormInput.css"
+import "./FormInput.css"
 function FormInput(props) {
     const [focus,setFocus] = useState(false)
     const {label,errorMessage,onChange,...inputSetting} = props
