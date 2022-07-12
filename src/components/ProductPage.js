@@ -2,12 +2,15 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../styles/singleProduct.css";
+import Slider from "./Slider";
 function ProductPage() {
   return (
     <>
       <Navbar></Navbar>
       <main className="product">
-        <div className="product-img">BS-Slider</div>
+        <div className="product-img">
+          <Slider />
+        </div>
         <div className="product-deatils">
           <h2>Product Name</h2>
           <div className="product-desc">

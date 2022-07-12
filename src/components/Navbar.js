@@ -5,8 +5,20 @@ import NavLinks from "./NavLinks";
 import CartMenu from "./CartMenu";
 import LoginForm from "./LoginForm";
 import HamburgerMenu from "./HamburgerMenu";
-
+import { useState } from "react";
+import RegisterForm from "./RegisterForm";
 function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
+  const [signIn, setSingIn] = useState(false);
+  function handleClick(comp) {
+    if (comp === "cart") {
+      setOpen(!open);
+    }
+    if (comp === "login") {
+      setOpenLogin(!openLogin);
+    }
+  }
   return (
     <header>
       <nav className="navbar">
@@ -15,14 +27,23 @@ function Navbar() {
           <NavLinks />
         </div>
         <div className="nav-right">
-          <div className="cart">
+          <div className="cart" onClick={() => handleClick("cart")}>
             cart <span className="cart_amount">2</span>
-            <CartMenu />
+            <CartMenu open={open} />
           </div>
-          <a className="signin" href="/">
+          <div className="signin" onClick={() => handleClick("login")}>
             sign in/Register
-          </a>
-          <LoginForm />
+          </div>
+          {signIn ? (
+            <LoginForm open={openLogin} setOpen={setOpenLogin} />
+          ) : (
+            <RegisterForm
+              open={openLogin}
+              setOpen={setOpenLogin}
+              setSingIn={setSingIn}
+            />
+          )}
+
           <div className="search">
             <input type="text" className="search" />
             <button className="search-btn">search</button>
