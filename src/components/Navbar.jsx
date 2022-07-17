@@ -7,6 +7,7 @@ import LoginForm from "./LoginForm";
 import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 import RegisterForm from "./RegisterForm";
+
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);

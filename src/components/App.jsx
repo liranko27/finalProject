@@ -1,10 +1,12 @@
 import "../styles/App.css";
-import ProductPage from "./ProductPage";
-import Homepage from "./Homepage";
+// import ProductPage from "./ProductPage";
+// import Homepage from "./Homepage";
+import MyProfile from "./MyProfile";
 function App() {
   return (
     <div className="App">
-      <Homepage />
+      <MyProfile />
+      {/* <Homepage /> */}
       {/* <ProductPage></ProductPage> */}
     </div>
   );
