@@ -3,6 +3,6 @@ footer {
     background-color: cadetblue;
     text-align: center;
     padding: .5rem 0;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
 }
