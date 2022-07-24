@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../styles/singleProduct.css";
 import Slider from "./Slider";
+import Amount from "./Amount";
 function ProductPage() {
   return (
     <>
@@ -29,11 +30,12 @@ function ProductPage() {
               </h5>
               <div className="amount-input">
                 <h5>Quantity</h5>
-                <input type="number" />
+                {/* <input type="number" />
                 <div className="amount-controls">
                   <button>⬆</button>
                   <button>⬇</button>
-                </div>
+                </div> */}
+                <Amount />
               </div>
             </div>
             <div className="product-btns">

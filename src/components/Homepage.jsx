@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../styles/Homepage.css'
+import ProductCard from './ProductCard'
 function Homepage() {
     return (
         <>
@@ -36,124 +37,14 @@ function Homepage() {
                 </aside>
                 <main>
                     <section class="products">
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card_img">
-                                image cap
-                            </div>
-                            <p class="product_name">product name</p>
-                            <p class="product_des">Product description</p>
-                            <p class="product_price">Product price</p>
-                            <button class="wish">add to wishlist</button>
-                            <div class="card_btns">
-                                <button class="add-cart">add to cart</button>
-                                <button class="buy">Buy it now</button>
-                            </div>
-                        </div>
-
+                        <ProductCard amount={12} />
+                        <ProductCard amount={0} />
+                        <ProductCard amount={5} />
+                        <ProductCard amount={8} />
+                        <ProductCard amount={0} />
+                        <ProductCard amount={11} />
+                        <ProductCard amount={9} />
+                        <ProductCard amount={0} />
                     </section>
                 </main>
             </section>
