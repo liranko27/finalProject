@@ -1,0 +1,31 @@
+.checkout-details {
+    width: 80%;
+    margin: 20px auto;
+    padding: 1rem;
+}
+
+.checkout-details input {
+    width: 100%;
+
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+input[type='number'] {
+    width: 50%;
+    display: block;
+}
+
+.checkout-wrap {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8rem;
+}

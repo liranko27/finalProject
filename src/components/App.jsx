@@ -1,11 +1,14 @@
 import "../styles/App.css";
 // import ProductPage from "./ProductPage";
 // import Homepage from "./Homepage";
-import MyProfile from "./MyProfile";
+// import MyProfile from "./MyProfile";
+import Checkout from "./Checkout";
 function App() {
   return (
     <div className="App">
-      <MyProfile />
+      <Checkout />
+      {/* <Amount /> */}
+      {/* <MyProfile /> */}
       {/* <Homepage /> */}
       {/* <ProductPage></ProductPage> */}
     </div>

@@ -10,6 +10,12 @@
     border-radius: 10px;
 }
 
+@media (min-width:1200px) {
+    .cart-menu {
+        width: 33%;
+    }
+}
+
 .cart-products {
     height: 65%;
     overflow: scroll;

@@ -34,7 +34,7 @@
 
 .amount-input input {
     width: 50px;
-    margin: 0 1rem;
+    margin-left: 1rem;
 }
 
 .price-quanitiy {
@@ -46,11 +46,13 @@
     flex: 1 0 25%;
     margin: 0 2rem;
 }
-.product-img img{
+
+.product-img img {
     max-height: 350px;
     border-radius: 20px;
     width: 100%;
 }
+
 .product-desc {
     margin: 0 1rem;
 

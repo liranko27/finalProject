@@ -9,12 +9,12 @@ import { useState } from "react";
 import RegisterForm from "./RegisterForm";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [openLogin, setOpenLogin] = useState(false);
   const [signIn, setSingIn] = useState(false);
   function handleClick(comp) {
     if (comp === "cart") {
-      setOpen(!open);
+      setOpen(false);
     }
     if (comp === "login") {
       setOpenLogin(!openLogin);
