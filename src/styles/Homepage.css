@@ -8,6 +8,10 @@
     font-size: 3rem;
 }
 
+span {
+    margin-right: 2rem;
+}
+
 aside {
     width: 20%;
     border-radius: 15px;

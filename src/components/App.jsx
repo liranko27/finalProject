@@ -1,16 +1,20 @@
 import "../styles/App.css";
-// import ProductPage from "./ProductPage";
-// import Homepage from "./Homepage";
-// import MyProfile from "./MyProfile";
+import ProductPage from "./ProductPage";
+import Homepage from "./Homepage";
+import MyProfile from "./MyProfile";
 import Checkout from "./Checkout";
+import Cart from "./Cart";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <Checkout />
-      {/* <Amount /> */}
+      <Navbar />
+      {/* <Checkout /> */}
       {/* <MyProfile /> */}
-      {/* <Homepage /> */}
-      {/* <ProductPage></ProductPage> */}
+      <Homepage />
+      {/* <ProductPage /> */}
+      <Footer />
     </div>
   );
 }

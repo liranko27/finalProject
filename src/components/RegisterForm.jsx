@@ -4,12 +4,13 @@ import { useState } from "react";
 import "../styles/MyForm.css";
 import "../styles/LoginForm.css";
 
-function RegisterForm({ open, setOpen ,setSingIn }) {
+function RegisterForm({ open, setOpen, login, setLogin }) {
+
   const [values, setValues] = useState({
     email: "",
     username: "",
-    firstName:"",
-    lastName:"",
+    firstName: "",
+    lastName: "",
     password: "",
     confirmPassword: "",
   });
@@ -23,7 +24,7 @@ function RegisterForm({ open, setOpen ,setSingIn }) {
       errorMessage:
         "username should be 3-16 chars and not inclued speatial char",
       pattern: "^[A-Za-z0-9]{3,16}$",
-      required:true,
+      required: true,
     },
     {
       id: 2,
@@ -34,7 +35,7 @@ function RegisterForm({ open, setOpen ,setSingIn }) {
       errorMessage:
         "First name should be 3-16 chars and not inclued speatial char",
       pattern: "^[A-Za-z0-9]{3,16}$",
-      required:true,
+      required: true,
     },
     {
       id: 3,
@@ -45,7 +46,7 @@ function RegisterForm({ open, setOpen ,setSingIn }) {
       errorMessage:
         "Last name should be 3-16 chars and not inclued speatial char",
       pattern: "^[A-Za-z0-9]{3,16}$",
-      required:true,
+      required: true,
     },
     {
       id: 4,
@@ -78,12 +79,10 @@ function RegisterForm({ open, setOpen ,setSingIn }) {
       required: true,
       pattern: values.password,
     },
-    
+
   ];
   const handleSubmit = (e) => {
     e.preventDefault();
-    setOpen(false);
-    setSingIn(true)
     let output = "";
     for (const input in values) {
       output += `${input}: ${values[input]}\n`;
@@ -109,6 +108,7 @@ function RegisterForm({ open, setOpen ,setSingIn }) {
             />
           );
         })}
+        <a onClick={() => setLogin(!login)}>You have account? click to login</a>
         <button>Submit</button>
       </form>
     </div>

@@ -6,7 +6,6 @@ import '../styles/Checkout.css'
 function Checkout() {
     return (
         <>
-            <Navbar />
             <div className="checkout-wrap">
                 <div className='checkout-details'>
                     <div>
@@ -35,8 +34,6 @@ function Checkout() {
                 </div>
 
             </div>
-
-            <Footer />
         </>
     )
 }

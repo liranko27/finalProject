@@ -8,3 +8,13 @@
     transform: translateY(100%);
     border: 2px solid;
 }
+
+h5 {
+    cursor: pointer;
+}
+
+@media (min-width:1200px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
