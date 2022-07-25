@@ -7,7 +7,6 @@ import Amount from "./Amount";
 function ProductPage() {
   return (
     <>
-      <Navbar></Navbar>
       <main className="product">
         <div className="product-img">
           <Slider />
@@ -30,11 +29,6 @@ function ProductPage() {
               </h5>
               <div className="amount-input">
                 <h5>Quantity</h5>
-                {/* <input type="number" />
-                <div className="amount-controls">
-                  <button>⬆</button>
-                  <button>⬇</button>
-                </div> */}
                 <Amount />
               </div>
             </div>
@@ -46,7 +40,6 @@ function ProductPage() {
           </div>
         </div>
       </main>
-      <Footer></Footer>
     </>
   );
 }

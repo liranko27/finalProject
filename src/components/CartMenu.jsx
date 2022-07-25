@@ -12,7 +12,6 @@ function CartMenu({ open }) {
         <CartProductCard />
         <CartProductCard />
         <CartProductCard />
-
       </section>
       <div className="cart-clear">
         <button>Clear all products</button>

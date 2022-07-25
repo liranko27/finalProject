@@ -1,6 +1,8 @@
 import React from 'react'
 import '../styles/CheckoutCard.css'
 import Amount from './Amount'
+import { FaTrash } from 'react-icons/fa'
+
 function CheckoutCard() {
     return (
         <div className="checkout-card">
@@ -17,7 +19,7 @@ function CheckoutCard() {
             </div>
             <div className="checkout-btns">
                 <Amount />
-                <div>🗑</div>
+                <div className='trash'><FaTrash /></div>
             </div>
         </div>
     )

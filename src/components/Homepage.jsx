@@ -4,30 +4,42 @@ import Footer from './Footer'
 import '../styles/Homepage.css'
 import ProductCard from './ProductCard'
 function Homepage() {
+
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <section class="hero">
                 Hero
             </section>
-            <section class="container">
+            <div className="sort">
+                <span>Sory By:</span>
+                <input type="radio" name="sort" id="LTH" />
+                <label htmlFor='LTH'>Low to high</label>
+                <input type="radio" name="sort" id="HTL" />
+                <label htmlFor='HTL'>High to low</label>
+                <input type="radio" name="sort" id="newest" />
+                <label htmlFor='newest'>Newest product</label>
+                <input type="radio" name="sort" id="oldest" />
+                <label htmlFor='oldest'>Oldest product</label>
+            </div>
+            <section className="container">
                 <aside>
-                    <h3 class="category_heading">Category</h3>
-                    <div class="sub_categories">
+                    <h3 className="category_heading">Category</h3>
+                    <div className="sub_categories">
                         <p>sub category</p>
                         <p>sub category</p>
                         <p>sub category</p>
                         <p>sub category</p>
                     </div>
-                    <h3 class="category_heading">Category</h3>
-                    <div class="sub_categories">
+                    <h3 className="category_heading">Category</h3>
+                    <div className="sub_categories">
                         <p>sub category</p>
                         <p>sub category</p>
                         <p>sub category</p>
                         <p>sub category</p>
                     </div>
-                    <h3 class="category_heading">Category</h3>
-                    <div class="sub_categories">
+                    <h3 className="category_heading">Category</h3>
+                    <div className="sub_categories">
                         <p>sub category</p>
                         <p>sub category</p>
                         <p>sub category</p>
@@ -36,7 +48,7 @@ function Homepage() {
 
                 </aside>
                 <main>
-                    <section class="products">
+                    <section className="products">
                         <ProductCard amount={12} />
                         <ProductCard amount={0} />
                         <ProductCard amount={5} />
@@ -48,7 +60,7 @@ function Homepage() {
                     </section>
                 </main>
             </section>
-            <Footer className='footer' />
+            {/* <Footer className='footer' /> */}
         </>
     )
 }

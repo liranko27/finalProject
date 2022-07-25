@@ -11,6 +11,10 @@
     background-color: #fff;
 }
 
+a {
+    cursor: pointer;
+}
+
 .nav-logo {
     width: 80px;
 }
@@ -27,6 +31,7 @@
     align-items: center;
     justify-content: space-around;
 }
+
 .signin {
     position: relative;
 }
@@ -73,15 +78,19 @@
     .links {
         display: none;
     }
-    .cart{
+
+    .cart {
         display: none;
     }
-    .signin{
+
+    .signin {
         display: none;
     }
-    .search{
+
+    .search {
         display: none;
     }
+
     .hamburger-btn {
         margin: auto 0;
         width: 30px;

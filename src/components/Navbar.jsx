@@ -9,15 +9,19 @@ import { useState } from "react";
 import RegisterForm from "./RegisterForm";
 
 function Navbar() {
-  const [open, setOpen] = useState(true);
+  const [openCart, setOpenCart] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
   const [signIn, setSingIn] = useState(false);
+  const [hamburger, setHamburger] = useState(false)
+
   function handleClick(comp) {
     if (comp === "cart") {
-      setOpen(false);
+      setOpenLogin(false);
+      setOpenCart(!openCart)
     }
     if (comp === "login") {
       setOpenLogin(!openLogin);
+      setOpenCart(false)
     }
   }
   return (
@@ -30,19 +34,20 @@ function Navbar() {
         <div className="nav-right">
           <div className="cart" onClick={() => handleClick("cart")}>
             cart <span className="cart_amount">2</span>
-            <CartMenu open={open} />
           </div>
+          <CartMenu open={openCart} />
           <div className="signin" onClick={() => handleClick("login")}>
-            sign in/Register
+            {false ? 'my account' : 'sign in/Register'}
           </div>
           {signIn ? (
-            <LoginForm open={openLogin} setOpen={setOpenLogin} />
-          ) : (
             <RegisterForm
               open={openLogin}
               setOpen={setOpenLogin}
-              setSingIn={setSingIn}
+              setLogin={setSingIn}
+              login={signIn}
             />
+          ) : (
+            <LoginForm open={openLogin} setOpen={setOpenLogin} login={signIn} setLogin={setSingIn} />
           )}
 
           <div className="search">
@@ -50,9 +55,8 @@ function Navbar() {
             <button className="search-btn">search</button>
           </div>
 
-          <div className="hamburger-btn">
-            <HamburgerMenu />
-          </div>
+          <div className="hamburger-btn" onClick={() => setHamburger(!hamburger)}></div>
+          {hamburger ? <HamburgerMenu /> : ''}
         </div>
       </nav>
     </header>

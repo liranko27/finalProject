@@ -4,7 +4,7 @@ import { useState } from "react";
 import "../styles/MyForm.css";
 import "../styles/LoginForm.css";
 
-function LoginForm({ open, setOpen }) {
+function LoginForm({ open, setOpen, login, setLogin }) {
   const [values, setValues] = useState({
     username: "",
     password: "",
@@ -62,6 +62,7 @@ function LoginForm({ open, setOpen }) {
             />
           );
         })}
+        <a onClick={() => setLogin(!login)}>Not register yet? click to register</a>
         <button>Submit</button>
       </form>
     </div>

@@ -4,6 +4,10 @@
 
 }
 
+.amount-wrap svg {
+    font-size: .8rem;
+}
+
 .amount-wrap input {
     border-radius: 20px;
     border-radius: 10px 0 0 10px;
