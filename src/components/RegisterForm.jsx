@@ -37,7 +37,7 @@ function RegisterForm({ open, setOpen, login, setLogin }) {
             />
           );
         })}
-        <a onClick={() => setLogin(!login)}>You have account? click to login</a>
+        <p onClick={() => setLogin(!login)}>You have account? click to login</p>
         <button>Submit</button>
       </form>
     </div>

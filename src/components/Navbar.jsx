@@ -68,7 +68,7 @@ function Navbar() {
           <div className="hamburger-btn" onClick={openHambuergerMenu}>
             <GiHamburgerMenu />
           </div>
-          {hamburger ? <HamburgerMenu openCart={openCartHamburger} /> : ''}
+          {hamburger ? <HamburgerMenu openCart={openCartHamburger} close={setHamburger} /> : ''}
         </div>
       </nav>
     </header>

@@ -2,11 +2,12 @@ import React from 'react'
 import Amount from './Amount'
 import "../styles/CartMenu.css";
 import { FaTrash } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function CartProductCard() {
     return (
         <div className="cart-product">
-            <div className="cart-img">image cap$$</div>
+            <Link to="/productPage" className="cart-img">image cap$$</Link>
             <div className="cart-btns">
                 <p>Product name</p>
                 <div className='amount-trash'>

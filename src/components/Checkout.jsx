@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
 import CheckoutCard from './CheckoutCard'
 import '../styles/Checkout.css'
 function Checkout() {

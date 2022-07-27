@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/CartMenu.css";
 import CartProductCard from "./CartProductCard";
+import { Link } from 'react-router-dom'
 function CartMenu({ open }) {
   return open === false ? (
     ""
@@ -15,7 +16,7 @@ function CartMenu({ open }) {
       </section>
       <div className="cart-clear">
         <button>Clear all products</button>
-        <button>Pay</button>
+        <Link className="Link" to="/checkout">Pay</Link>
         <p>Total price: 150$</p>
       </div>
     </div>

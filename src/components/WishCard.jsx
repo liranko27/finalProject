@@ -1,10 +1,11 @@
 import React from 'react'
 import '../styles/WishCard.css'
+import { Link } from 'react-router-dom'
 function WishCard({ amount }) {
     console.log(amount)
     return (
         <div className="wishlist-card">
-            <div className="wish-img">img</div>
+            <Link to="/productPage" className="wish-img">img</Link>
             <div className="wish-details">
                 <p className="wish-name">Product name$$</p>
                 <p className="wish-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, est
@@ -18,7 +19,7 @@ function WishCard({ amount }) {
             {amount > 0 ? <div className="wish-btns">
                 <button className="wish-remove">Add to wishlist</button>
                 <button className="wish-cart">Add to cart</button>
-                <button className="wish-buy">Buy it now</button>
+                <Link to="/checkout" className="wish-buy">Buy it now</Link>
             </div> : <div className="wish-btns">
                 <div className="oos-tag">Out of stock</div>
                 <button className="wish-remove">Remove from wishlist</button>

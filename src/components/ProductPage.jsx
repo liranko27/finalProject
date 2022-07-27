@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import "../styles/singleProduct.css";
 import Slider from "./Slider";
 import Amount from "./Amount";
+import { Link } from "react-router-dom";
+
 function ProductPage() {
   return (
     <>
@@ -33,7 +33,7 @@ function ProductPage() {
               </div>
             </div>
             <div className="product-btns">
-              <button className="product-buy">Buy it now</button>
+              <Link to="/checkout" className="product-buy">Buy it now</Link>
               <button className="product-cart">Add to cart</button>
               <button className="product-wish">Add to wishlist</button>
             </div>
