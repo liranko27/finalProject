@@ -3,16 +3,15 @@ import ProductPage from "./ProductPage";
 import Homepage from "./Homepage";
 import MyProfile from "./MyProfile";
 import Checkout from "./Checkout";
-import Cart from "./Cart";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Checkout /> */}
+      <Checkout />
       {/* <MyProfile /> */}
-      <Homepage />
+      {/* <Homepage /> */}
       {/* <ProductPage /> */}
       <Footer />
     </div>
