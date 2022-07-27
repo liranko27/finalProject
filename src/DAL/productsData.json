@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "productName": "iPhone14",
+        "category": "cellphones",
+        "unitPrice": 250,
+        "unitInStock": 0,
+        "description": "The newest IPHONE!",
+        "published": "2022-07-27",
+        "brand": "apple",
+        "img": "https://www.ivory.co.il/files/catalog/org/1651054719n19Hu.jpg"
+    },
+    {
+        "id": 2,
+        "productName": "MacBook pro M2",
+        "category": "computers",
+        "unitPrice": 1000,
+        "unitInStock": 80,
+        "description": "The newest MacBook pro M2!",
+        "published": "2022-07-22",
+        "brand": "apple",
+        "img": "https://buyiphone.co.il/wp-content/uploads/2022/07/mbp-spacegray-%D7%9E%D7%A7%D7%91%D7%95%D7%A7-%D7%A4%D7%A8%D7%95-13.3-%D7%99%D7%91%D7%95%D7%90%D7%9F-%D7%A8%D7%A9%D7%9E%D7%99-.jpeg"
+    },
+    {
+        "id": 3,
+        "productName": "Asus ROG",
+        "category": "computers",
+        "unitPrice": 350,
+        "unitInStock": 20,
+        "description": "The newest Computer by asus",
+        "published": "2022-07-18",
+        "brand": "asus",
+        "img": "https://www.ivory.co.il/files/catalog/org/1646314351u51Xn.jpg"
+    },
+    {
+        "id": 4,
+        "productName": "AirPods pro 2",
+        "category": "accessories",
+        "unitPrice": 55,
+        "unitInStock": 15,
+        "description": "The newest earphones by apple!",
+        "published": "2022-06-25",
+        "brand": "apple",
+        "img": "https://www.ivory.co.il/files/catalog/org/1636709318A18Yi.jpg"
+    },
+    {
+        "id": 5,
+        "productName": "HP Laptop 15S-FQ2000NJ ",
+        "category": "computers",
+        "unitPrice": 250,
+        "unitInStock": 40,
+        "description": "The newest IPHONE!",
+        "published": "2022-07-27",
+        "brand": "apple",
+        "img": "https://www.ivory.co.il/files/catalog/org/1656259578D78UC.jpg"
+    },
+    {
+        "id": 6,
+        "productName": "Razer BlackShark V2 X",
+        "category": "cellphones",
+        "unitPrice": 250,
+        "unitInStock": 40,
+        "description": "The newest IPHONE!",
+        "published": "2022-07-27",
+        "brand": "apple",
+        "img": "https://www.ivory.co.il/files/catalog/org/1603032702b02Wo.jpg"
+    }
+]
