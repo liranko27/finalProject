@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/Homepage.css'
 import ProductCard from './ProductCard'
+import prods from '../DAL/productsData.json'
 function Homepage() {
-
     return (
         <>
             <section className="hero">
@@ -53,14 +53,8 @@ function Homepage() {
                 </aside>
                 <main>
                     <section className="products">
-                        <ProductCard amount={12} />
-                        <ProductCard amount={0} />
-                        <ProductCard amount={5} />
-                        <ProductCard amount={8} />
-                        <ProductCard amount={0} />
-                        <ProductCard amount={11} />
-                        <ProductCard amount={9} />
-                        <ProductCard amount={0} />
+                        {prods.map(prod => <ProductCard key={prod.id} amount={prod.unitInStock} product={prod} />)}
+
                     </section>
                 </main>
             </section>
@@ -69,3 +63,13 @@ function Homepage() {
 }
 
 export default Homepage
+
+
+{/* <ProductCard amount={12} />
+                        <ProductCard amount={0} />
+                        <ProductCard amount={5} />
+                        <ProductCard amount={8} />
+                        <ProductCard amount={0} />
+                        <ProductCard amount={11} />
+                        <ProductCard amount={9} />
+                        <ProductCard amount={0} /> */}

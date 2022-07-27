@@ -8,6 +8,7 @@ import HamburgerMenu from "./HamburgerMenu";
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from "react";
 import RegisterForm from "./RegisterForm";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
@@ -38,7 +39,10 @@ function Navbar() {
     <header>
       <nav className="navbar">
         <div className="nav-left">
-          <img className="nav-logo" src={logo} alt="logo" />
+          <Link to="/">
+            <img className="nav-logo" src={logo} alt="logo" />
+
+          </Link>
           <NavLinks />
         </div>
         <div className="nav-right">
