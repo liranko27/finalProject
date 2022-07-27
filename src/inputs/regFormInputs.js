@@ -62,7 +62,7 @@ export function regInputs() {
             label: "Confirm Password",
             errorMessage: "Password dont match ",
             required: true,
-            pattern: values.password,
+            pattern: '',
         },
 
     ]

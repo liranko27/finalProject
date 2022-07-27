@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks";
 import CartMenu from "./CartMenu";
 import LoginForm from "./LoginForm";
 import HamburgerMenu from "./HamburgerMenu";
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from "react";
 import RegisterForm from "./RegisterForm";
 
@@ -55,7 +56,9 @@ function Navbar() {
             <button className="search-btn">search</button>
           </div>
 
-          <div className="hamburger-btn" onClick={() => setHamburger(!hamburger)}></div>
+          <div className="hamburger-btn" onClick={() => setHamburger(!hamburger)}>
+            <GiHamburgerMenu />
+          </div>
           {hamburger ? <HamburgerMenu /> : ''}
         </div>
       </nav>

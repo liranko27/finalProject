@@ -8,6 +8,8 @@ function RegisterForm({ open, setOpen, login, setLogin }) {
 
   const [values, setValues] = useState(regValues);
   const inputs = regInputs();
+  inputs[5].pattern = values.password
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let output = "";
