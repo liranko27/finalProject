@@ -49,6 +49,9 @@ a {
     list-style: none;
 }
 
+.hamburger-btn {
+    display: none;
+}
 
 /* Cart */
 .cart {
@@ -92,30 +95,15 @@ a {
     }
 
     .hamburger-btn {
-        margin: auto 0;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-    }
-
-    .hamburger-btn::before {
-        content: '';
         display: block;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        transform: translateY(-8px)
     }
 
-    .hamburger-btn::after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 3px;
-        background-color: black;
-        transform: translateY(5px)
+    .hamburger-btn svg {
+        font-size: 2.5rem;
+        border: 1px solid gray;
+        padding: .4rem;
+        border-radius: 5px;
     }
-
 
 }
 
