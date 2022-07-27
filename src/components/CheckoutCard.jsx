@@ -2,11 +2,11 @@ import React from 'react'
 import '../styles/CheckoutCard.css'
 import Amount from './Amount'
 import { FaTrash } from 'react-icons/fa'
-
+import { Link } from 'react-router-dom'
 function CheckoutCard() {
     return (
         <div className="checkout-card">
-            <div className="checkout-img">img</div>
+            <Link to="/productPage" className="checkout-img">img</Link>
             <div className="checkout-details">
                 <p className="checkout-name">Product name$$</p>
                 <p className="checkout-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, est

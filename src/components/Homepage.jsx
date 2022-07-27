@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
 import '../styles/Homepage.css'
 import ProductCard from './ProductCard'
 function Homepage() {

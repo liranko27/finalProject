@@ -15,6 +15,15 @@ function Navbar() {
   const [signIn, setSingIn] = useState(false);
   const [hamburger, setHamburger] = useState(false)
 
+  function openCartHamburger() {
+    setHamburger(false)
+    setOpenCart(true)
+  }
+  function openHambuergerMenu() {
+    setHamburger(!hamburger)
+    setOpenCart(false)
+  }
+
   function handleClick(comp) {
     if (comp === "cart") {
       setOpenLogin(false);
@@ -56,10 +65,10 @@ function Navbar() {
             <button className="search-btn">search</button>
           </div>
 
-          <div className="hamburger-btn" onClick={() => setHamburger(!hamburger)}>
+          <div className="hamburger-btn" onClick={openHambuergerMenu}>
             <GiHamburgerMenu />
           </div>
-          {hamburger ? <HamburgerMenu /> : ''}
+          {hamburger ? <HamburgerMenu openCart={openCartHamburger} close={setHamburger} /> : ''}
         </div>
       </nav>
     </header>

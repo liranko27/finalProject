@@ -10,6 +10,11 @@
     border-radius: 10px;
 }
 
+.Link {
+    border: 2px solid black;
+    margin-left: .5rem;
+}
+
 @media (min-width:1200px) {
     .cart-menu {
         width: 33%;
