@@ -7,7 +7,7 @@ function NavLinks() {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/myProfile" href="/">about /myprofile</Link>
+        <Link to="/about" href="/">about</Link>
       </li>
     </ul>
   );

@@ -15,6 +15,8 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="myProfile" element={<MyProfile />} />
         <Route path="productPage" element={<ProductPage />} />
+        <Route path="about" element={<div style={{ color: "blue", margin: "15rem 0rem" }}>About Page</div>} />
+        <Route path="*" element={<Homepage />} />
       </Routes>
       <Footer />
 
