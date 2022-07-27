@@ -9,15 +9,22 @@ function Homepage() {
                 Hero
             </section>
             <div className="sort">
-                <span>Sory By:</span>
-                <input type="radio" name="sort" id="LTH" />
-                <label htmlFor='LTH'>Low to high</label>
-                <input type="radio" name="sort" id="HTL" />
-                <label htmlFor='HTL'>High to low</label>
-                <input type="radio" name="sort" id="newest" />
-                <label htmlFor='newest'>Newest product</label>
-                <input type="radio" name="sort" id="oldest" />
-                <label htmlFor='oldest'>Oldest product</label>
+                <div>
+                    <span>Sory By:</span>
+                </div>
+                <div>
+                    <input type="radio" name="sort" id="LTH" />
+                    <label htmlFor='LTH'>Low to high</label>
+                    <input type="radio" name="sort" id="HTL" />
+                    <label htmlFor='HTL'>High to low</label>
+                </div>
+                <div>
+                    <input type="radio" name="sort" id="newest" />
+                    <label htmlFor='newest'>Newest product</label>
+                    <input type="radio" name="sort" id="oldest" />
+                    <label htmlFor='oldest'>Oldest product</label>
+                </div>
+
             </div>
             <section className="container">
                 <aside>
