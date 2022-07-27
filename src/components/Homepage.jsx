@@ -7,8 +7,7 @@ function Homepage() {
 
     return (
         <>
-            {/* <Navbar /> */}
-            <section class="hero">
+            <section className="hero">
                 Hero
             </section>
             <div className="sort">
@@ -60,7 +59,6 @@ function Homepage() {
                     </section>
                 </main>
             </section>
-            {/* <Footer className='footer' /> */}
         </>
     )
 }
