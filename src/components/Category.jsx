@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Category({ title, subCategories }) {
+function Category({ title, subCategories, sort }) {
     let keys = 0
 
     return (
@@ -9,7 +9,7 @@ function Category({ title, subCategories }) {
             <div className="sub_categories">
                 {subCategories.map(sub => {
                     keys++
-                    return <p key={keys} onClick={e => { console.log(e.target.innerText) }}>{sub}</p>
+                    return <p key={keys} onClick={() => { sort(title, sub) }}>{sub}</p>
                 })}
             </div>
         </>

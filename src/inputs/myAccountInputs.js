@@ -56,7 +56,17 @@ export function inputsArr() {
                     "Last name should be 3-16 chars and not inclued speatial char",
                 pattern: "^[A-Za-z0-9]{3,16}$",
                 required: true,
-            }
+            }, {
+                id: 3,
+                name: "phone",
+                type: "tel",
+                placeholder: "Phone",
+                label: "Phone number",
+                errorMessage:
+                    "Phone number should be 8-20 digits and not inclued speatial char or letters",
+                pattern: "^[0-9]{8,20}$",
+                required: true,
+            },
         ],
         address: [
             {

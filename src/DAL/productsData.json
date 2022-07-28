@@ -51,18 +51,18 @@
         "unitInStock": 40,
         "description": "The newest IPHONE!",
         "published": "2022-07-27",
-        "brand": "apple",
+        "brand": "hp",
         "img": "https://www.ivory.co.il/files/catalog/org/1656259578D78UC.jpg"
     },
     {
         "id": 6,
         "productName": "Razer BlackShark V2 X",
-        "category": "cellphones",
+        "category": "accsessories",
         "unitPrice": 250,
         "unitInStock": 40,
         "description": "The newest IPHONE!",
         "published": "2022-07-27",
-        "brand": "apple",
+        "brand": "razer",
         "img": "https://www.ivory.co.il/files/catalog/org/1603032702b02Wo.jpg"
     }
 ]
