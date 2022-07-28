@@ -12,7 +12,11 @@ function Homepage() {
     useEffect(() => {
         getData().then(setProducts)
     }, [])
-
+    async function sortByCategory(category, subCategory) {
+        console.log(category, subCategory)
+        const prods = await getData()
+        setProducts(prods.filter(product => product.category === category && product.brand === subCategory))
+    }
     function sortProducts(key, dir) {
         setProducts([...products.sort((a, b) => {
             if (a[key] > b[key]) {
@@ -53,7 +57,7 @@ function Homepage() {
             <section className="container">
                 <aside>
                     {categories.map(sub => {
-                        return <Category key={sub.id} title={sub.categoryName} subCategories={sub.subCategories} />
+                        return <Category key={sub.id} sort={sortByCategory} title={sub.categoryName} subCategories={sub.subCategories} />
                     })}
                 </aside>
                 <main>

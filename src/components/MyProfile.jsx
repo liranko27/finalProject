@@ -34,7 +34,7 @@ function MyProfile() {
                     <h3 style={{ textDecoration: "underline" }}>My Profile</h3>
                     <ul className="myAccount-list">
                         <li id="password" onClick={handleClick}>Change password</li>
-                        <li id="name" onClick={handleClick}>Change name</li>
+                        <li id="name" onClick={handleClick}>Change name / phone</li>
                         <li id="address" onClick={handleClick}>Change address</li>
                         <li id="email" onClick={handleClick}>Change email</li>
                     </ul>
@@ -66,7 +66,7 @@ function MyProfile() {
                         <button>Save</button>
                     </div> : ''}
                     {open.name ? <div className="change-name ">
-                        <h2>change name</h2>
+                        <h2>change name and phone</h2>
                         {inputs.name.map(input => {
                             return (
                                 <FormInput

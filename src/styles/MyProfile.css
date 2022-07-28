@@ -153,3 +153,7 @@ label {
         text-align: center;
     }
 }
+
+li {
+    padding: 0;
+}
