@@ -5,6 +5,7 @@ import { getData } from '../DAL/api'
 import { useState, useEffect } from 'react'
 import categories from "../DAL/categories.json"
 import Category from './Category'
+import Slider from './Slider'
 
 function Homepage() {
     const [products, setProducts] = useState([])
@@ -34,7 +35,8 @@ function Homepage() {
     return (
         <>
             <section className="hero">
-                Hero
+                <Slider />
+                {/* hero */}
             </section>
             <div className="sort">
                 <div>
@@ -49,11 +51,12 @@ function Homepage() {
                 <div>
                     <input type="radio" name="sort" id="newest" onClick={() => sortProducts('published', 1)} />
                     <label htmlFor='newest'>Newest product</label>
-                    <input type="radio" name="sort" id="oldest" onClick={() => sortProducts('published', -1)} />
-                    <label htmlFor='oldest'>Oldest product</label>
+
                 </div>
 
             </div>
+            <input type="radio" name="sort" id="all" onClick={() => { getData().then(setProducts) }} />
+            <label htmlFor='all'>Get all product</label>
             <section className="my-container">
                 <aside>
                     {categories.map(sub => {

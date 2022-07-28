@@ -1,11 +1,16 @@
 .hero {
     margin-top: 10vh;
-    height: 400px;
+    height: 500px;
+    width: 100%;
     background-color: lightgray;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    font-size: 3rem;
+}
+
+.hero * {
+    height: 100%;
+}
+
+.hero img {
+    object-fit: cover;
 }
 
 span {
