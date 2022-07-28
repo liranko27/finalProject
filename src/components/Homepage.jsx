@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import categories from "../DAL/categories.json"
 import Category from './Category'
 import Slider from './Slider'
+import Spin from './Spin'
 
 function Homepage() {
     const [products, setProducts] = useState([])
@@ -36,7 +37,6 @@ function Homepage() {
         <>
             <section className="hero">
                 <Slider />
-                {/* hero */}
             </section>
             <div className="sort">
                 <div>
@@ -67,7 +67,7 @@ function Homepage() {
                     {products.length !== 0 ? (<section className="products">
                         {products.map(prod => <ProductCard key={(prod.id + 1).toString()} amount={prod.unitInStock} product={prod} />)}
                     </section>)
-                        : (<h1>loading...</h1>)}
+                        : <Spin />}
                 </main>
             </section>
         </>
