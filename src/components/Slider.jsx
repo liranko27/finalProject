@@ -13,7 +13,7 @@ function Slider() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.pexels.com/photos/11743021/pexels-photo-11743021.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -24,7 +24,7 @@ function Slider() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.pexels.com/photos/11643608/pexels-photo-11643608.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="https://images.pexels.com/photos/1432675/pexels-photo-1432675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt="Second slide"
         />
 
@@ -36,7 +36,7 @@ function Slider() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.pexels.com/photos/12319814/pexels-photo-12319814.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg"
           alt="Third slide"
         />
 
