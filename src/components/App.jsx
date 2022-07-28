@@ -6,7 +6,10 @@ import Checkout from "./Checkout";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Routes, Route } from 'react-router-dom'
+
+
 function App() {
+
   return (
     <div className="App">
       <Navbar />
