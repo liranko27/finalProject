@@ -1,16 +1,5 @@
 export function regInputs() {
     return [
-        // {
-        //     id: 1,
-        //     name: "username",
-        //     type: "text",
-        //     placeholder: "Username",
-        //     label: "Username",
-        //     errorMessage:
-        //         "username should be 3-16 chars and not inclued speatial char",
-        //     pattern: "^[A-Za-z0-9]{3,16}$",
-        //     required: true,
-        // },
         {
             id: 1,
             name: "firstName",
@@ -70,7 +59,6 @@ export function regInputs() {
 
 export const regValues = {
     email: "",
-    // username: "",
     firstName: "",
     lastName: "",
     password: "",
