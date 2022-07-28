@@ -1,8 +1,14 @@
 import React from 'react'
 import '../styles/Homepage.css'
 import ProductCard from './ProductCard'
-import prods from '../DAL/productsData.json'
+import { getData } from '../DAL/api'
+import { useState, useEffect } from 'react'
 function Homepage() {
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        getData().then(setProducts)
+    }, [])
+
     return (
         <>
             <section className="hero">
@@ -52,10 +58,9 @@ function Homepage() {
 
                 </aside>
                 <main>
-                    <section className="products">
-                        {prods.map(prod => <ProductCard key={prod.id} amount={prod.unitInStock} product={prod} />)}
-
-                    </section>
+                    {products.length !== 0 ? (<section className="products">
+                        {products.map(prod => <ProductCard key={prod.id} amount={prod.unitInStock} product={prod} />)}
+                    </section>) : (<h1>loading...</h1>)}
                 </main>
             </section>
         </>
@@ -64,12 +69,3 @@ function Homepage() {
 
 export default Homepage
 
-
-{/* <ProductCard amount={12} />
-                        <ProductCard amount={0} />
-                        <ProductCard amount={5} />
-                        <ProductCard amount={8} />
-                        <ProductCard amount={0} />
-                        <ProductCard amount={11} />
-                        <ProductCard amount={9} />
-                        <ProductCard amount={0} /> */}
