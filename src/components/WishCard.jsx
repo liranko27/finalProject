@@ -17,7 +17,7 @@ function WishCard({ amount }) {
                 <p className="wish-price">Product price</p>
             </div>
             {amount > 0 ? <div className="wish-btns">
-                <button className="wish-remove">Add to wishlist</button>
+                <button className="wish-remove">Remove from wishlist</button>
                 <button className="wish-cart">Add to cart</button>
                 <Link to="/checkout" className="wish-buy">Buy it now</Link>
             </div> : <div className="wish-btns">

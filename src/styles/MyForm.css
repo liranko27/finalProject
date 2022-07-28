@@ -20,5 +20,10 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+.MyForm {
+    overflow-y: scroll;
+    max-height: 580px;
 }

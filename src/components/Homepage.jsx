@@ -54,7 +54,7 @@ function Homepage() {
                 </div>
 
             </div>
-            <section className="container">
+            <section className="my-container">
                 <aside>
                     {categories.map(sub => {
                         return <Category key={sub.id} sort={sortByCategory} title={sub.categoryName} subCategories={sub.subCategories} />

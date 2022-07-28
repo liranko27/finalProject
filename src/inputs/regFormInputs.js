@@ -1,18 +1,18 @@
 export function regInputs() {
     return [
+        // {
+        //     id: 1,
+        //     name: "username",
+        //     type: "text",
+        //     placeholder: "Username",
+        //     label: "Username",
+        //     errorMessage:
+        //         "username should be 3-16 chars and not inclued speatial char",
+        //     pattern: "^[A-Za-z0-9]{3,16}$",
+        //     required: true,
+        // },
         {
             id: 1,
-            name: "username",
-            type: "text",
-            placeholder: "Username",
-            label: "Username",
-            errorMessage:
-                "username should be 3-16 chars and not inclued speatial char",
-            pattern: "^[A-Za-z0-9]{3,16}$",
-            required: true,
-        },
-        {
-            id: 2,
             name: "firstName",
             type: "text",
             placeholder: "First Name",
@@ -23,7 +23,7 @@ export function regInputs() {
             required: true,
         },
         {
-            id: 3,
+            id: 2,
             name: "lastName",
             type: "text",
             placeholder: "Last Name",
@@ -34,7 +34,7 @@ export function regInputs() {
             required: true,
         },
         {
-            id: 4,
+            id: 3,
             name: "email",
             type: "email",
             placeholder: "Email",
@@ -44,7 +44,7 @@ export function regInputs() {
             pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
         },
         {
-            id: 5,
+            id: 4,
             name: "password",
             type: "password",
             placeholder: "Password",
@@ -55,7 +55,7 @@ export function regInputs() {
             pattern: "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}$",
         },
         {
-            id: 6,
+            id: 5,
             name: "confirmPassword",
             type: "password",
             placeholder: "Confirm Password",
@@ -70,7 +70,7 @@ export function regInputs() {
 
 export const regValues = {
     email: "",
-    username: "",
+    // username: "",
     firstName: "",
     lastName: "",
     password: "",
