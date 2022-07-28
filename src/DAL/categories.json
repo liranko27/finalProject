@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "categoryName": "computers",
+        "subCategories": [
+            "apple",
+            "hp",
+            "dell",
+            "asus"
+        ]
+    },
+    {
+        "id": 2,
+        "categoryName": "cellphones",
+        "subCategories": [
+            "apple",
+            "samsung",
+            "microsoft",
+            "xiaomi"
+        ]
+    },
+    {
+        "id": 3,
+        "categoryName": "accsessories",
+        "subCategories": [
+            "razer",
+            "hp",
+            "logitch",
+            "steel serios"
+        ]
+    }
+]
