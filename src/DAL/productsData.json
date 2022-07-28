@@ -17,7 +17,7 @@
         "unitPrice": 1000,
         "unitInStock": 80,
         "description": "The newest MacBook pro M2!",
-        "published": "2022-07-22",
+        "published": "2022-06-22",
         "brand": "apple",
         "img": "https://buyiphone.co.il/wp-content/uploads/2022/07/mbp-spacegray-%D7%9E%D7%A7%D7%91%D7%95%D7%A7-%D7%A4%D7%A8%D7%95-13.3-%D7%99%D7%91%D7%95%D7%90%D7%9F-%D7%A8%D7%A9%D7%9E%D7%99-.jpeg"
     },
@@ -28,7 +28,7 @@
         "unitPrice": 350,
         "unitInStock": 20,
         "description": "The newest Computer by asus",
-        "published": "2022-07-18",
+        "published": "2022-05-18",
         "brand": "asus",
         "img": "https://www.ivory.co.il/files/catalog/org/1646314351u51Xn.jpg"
     },

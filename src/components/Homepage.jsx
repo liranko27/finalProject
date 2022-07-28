@@ -3,11 +3,27 @@ import '../styles/Homepage.css'
 import ProductCard from './ProductCard'
 import { getData } from '../DAL/api'
 import { useState, useEffect } from 'react'
+
+
 function Homepage() {
     const [products, setProducts] = useState([])
     useEffect(() => {
         getData().then(setProducts)
     }, [])
+    console.log(products)
+    function sortByPrice(key, dir) {
+        setProducts([...products.sort((a, b) => {
+            if (a[key] > b[key]) {
+                return -1 * dir
+            }
+            else if (a[key] < b[key]) {
+                return 1 * dir
+            }
+            else {
+                return 1
+            }
+        })])
+    }
 
     return (
         <>
@@ -19,15 +35,15 @@ function Homepage() {
                     <span>Sory By:</span>
                 </div>
                 <div>
-                    <input type="radio" name="sort" id="LTH" />
+                    <input type="radio" name="sort" id="LTH" onClick={() => sortByPrice('unitPrice', -1)} />
                     <label htmlFor='LTH'>Low to high</label>
-                    <input type="radio" name="sort" id="HTL" />
+                    <input type="radio" name="sort" id="HTL" onClick={() => sortByPrice('unitPrice', 1)} />
                     <label htmlFor='HTL'>High to low</label>
                 </div>
                 <div>
-                    <input type="radio" name="sort" id="newest" />
+                    <input type="radio" name="sort" id="newest" onClick={() => sortByPrice('published', 1)} />
                     <label htmlFor='newest'>Newest product</label>
-                    <input type="radio" name="sort" id="oldest" />
+                    <input type="radio" name="sort" id="oldest" onClick={() => sortByPrice('published', -1)} />
                     <label htmlFor='oldest'>Oldest product</label>
                 </div>
 
@@ -59,8 +75,9 @@ function Homepage() {
                 </aside>
                 <main>
                     {products.length !== 0 ? (<section className="products">
-                        {products.map(prod => <ProductCard key={prod.id} amount={prod.unitInStock} product={prod} />)}
-                    </section>) : (<h1>loading...</h1>)}
+                        {products.map(prod => <ProductCard key={(prod.id + 1).toString()} amount={prod.unitInStock} product={prod} />)}
+                    </section>)
+                        : (<h1>loading...</h1>)}
                 </main>
             </section>
         </>
