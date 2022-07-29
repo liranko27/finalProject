@@ -10,12 +10,11 @@ import Spin from './Spin'
 
 function Homepage() {
     const [products, setProducts] = useState([])
-    // console.log(categories)
     useEffect(() => {
         getData().then(setProducts)
     }, [])
     async function sortByCategory(category, subCategory) {
-        console.log(category, subCategory)
+        setProducts([])
         const prods = await getData()
         setProducts(prods.filter(product => product.category === category && product.brand === subCategory))
     }
