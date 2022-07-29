@@ -54,7 +54,10 @@ function Homepage() {
                 </div>
 
             </div>
-            <input type="radio" name="sort" id="all" onClick={() => { getData().then(setProducts) }} />
+            <input type="radio" name="sort" id="all" onClick={() => {
+                setProducts([])
+                getData().then(setProducts)
+            }} />
             <label htmlFor='all'>Get all product</label>
             <section className="my-container">
                 <aside>
