@@ -91,3 +91,9 @@
         display: inline-block;
     }
 }
+
+@media (min-width:1024px) {
+    .wishlist-card {
+        height: 20rem;
+    }
+}
