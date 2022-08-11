@@ -19,6 +19,7 @@ function MyProfile() {
     const [open, setOpen] = useState(def)
     const [values, setValues] = useState(myValues)
     const inputs = inputsArr()
+    //set validation pattern to confirm password 
     inputs.password[2].pattern = values.password.password
 
     const handleChange = (e, name) => {
@@ -31,7 +32,8 @@ function MyProfile() {
     function handleSubmit(e) {
         e.preventDefault()
         console.log(values[e.target.name])
-        setOpen({ ...def, ['success']: true })
+        setOpen({ ...def, success: true })
+        setValues({ ...values, [e.target.value]: myValues[e.target.value] })
     }
     return (
         <>
@@ -76,45 +78,51 @@ function MyProfile() {
                     </div> : ''}
                     {open.name ? <div className="change-name ">
                         <h2>change name and phone</h2>
-                        {inputs.name.map(input => {
-                            return (
-                                <FormInput
-                                    key={input.id}
-                                    {...input}
-                                    value={values.name[input.name]}
-                                    onChange={(e) => handleChange(e, 'name')}
-                                />
-                            )
-                        })}
-                        <button>Save</button>
+                        <form name='name' onSubmit={handleSubmit}>
+                            {inputs.name.map(input => {
+                                return (
+                                    <FormInput
+                                        key={input.id}
+                                        {...input}
+                                        value={values.name[input.name]}
+                                        onChange={(e) => handleChange(e, 'name')}
+                                    />
+                                )
+                            })}
+                            <button>Save</button>
+                        </form>
                     </div> : ''}
                     {open.address ? <div className="change-address ">
                         <h2>Change address</h2>
-                        {inputs.address.map(input => {
-                            return (
-                                <FormInput
-                                    key={input.id}
-                                    {...input}
-                                    value={values.address[input.name]}
-                                    onChange={(e) => handleChange(e, 'address')}
-                                />
-                            )
-                        })}
-                        <button>Save</button>
+                        <form name='address' onSubmit={handleSubmit}>
+                            {inputs.address.map(input => {
+                                return (
+                                    <FormInput
+                                        key={input.id}
+                                        {...input}
+                                        value={values.address[input.name]}
+                                        onChange={(e) => handleChange(e, 'address')}
+                                    />
+                                )
+                            })}
+                            <button>Save</button>
+                        </form>
                     </div> : ''}
                     {open.email ? <div className="change-email ">
                         <h2>change email</h2>
-                        {inputs.email.map(input => {
-                            return (
-                                <FormInput
-                                    key={input.id}
-                                    {...input}
-                                    value={values.email[input.name]}
-                                    onChange={(e) => handleChange(e, 'email')}
-                                />
-                            )
-                        })}
-                        <button>Save</button>
+                        <form name='email' onSubmit={handleSubmit}>
+                            {inputs.email.map(input => {
+                                return (
+                                    <FormInput
+                                        key={input.id}
+                                        {...input}
+                                        value={values.email[input.name]}
+                                        onChange={(e) => handleChange(e, 'email')}
+                                    />
+                                )
+                            })}
+                            <button>Save</button>
+                        </form>
                     </div> : ''}
                     {open.success ? <div className="success">
                         <h2>changed successfully</h2>
