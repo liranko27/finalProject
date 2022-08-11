@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/MyProfile.css'
-import WishCard from './WishCard'
+import WishCard from '../components/WishCard'
 import { useState } from 'react'
-import FormInput from './FormInput'
+import FormInput from '../components/FormInput'
 import { inputsArr, myValues } from '../inputs/myAccountInputs'
 
 

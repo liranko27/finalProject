@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/singleProduct.css";
-import Slider from "./Slider";
-import Amount from "./Amount";
+import Slider from "../features/Slider";
+import Amount from "../features/Amount";
 import { Link } from "react-router-dom";
 
 function ProductPage() {

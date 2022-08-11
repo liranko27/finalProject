@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/CheckoutCard.css'
-import Amount from './Amount'
+import Amount from '../features/Amount'
 import { FaTrash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 function CheckoutCard() {
