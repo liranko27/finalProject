@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/Homepage.css'
-import ProductCard from './ProductCard'
+import ProductCard from '../components/ProductCard'
 import { getData } from '../DAL/api'
 import { useState, useEffect } from 'react'
 import categories from "../DAL/categories.json"
-import Category from './Category'
-import Slider from './Slider'
-import Spin from './Spin'
+import Category from '../components/Category'
+import Slider from '../features/Slider'
+import Spin from '../features/Spin'
 
 function Homepage() {
     const [products, setProducts] = useState([])

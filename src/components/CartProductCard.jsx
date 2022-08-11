@@ -1,5 +1,5 @@
 import React from 'react'
-import Amount from './Amount'
+import Amount from '../features/Amount'
 import "../styles/CartMenu.css";
 import { FaTrash } from 'react-icons/fa'
 import { Link } from 'react-router-dom'

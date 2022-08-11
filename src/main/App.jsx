@@ -1,8 +1,8 @@
 import "../styles/App.css";
-import ProductPage from "./ProductPage";
-import Homepage from "./Homepage";
-import MyProfile from "./MyProfile";
-import Checkout from "./Checkout";
+import ProductPage from "../pages/ProductPage";
+import Homepage from "../pages/Homepage";
+import MyProfile from "../pages/MyProfile";
+import Checkout from "../pages/Checkout";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Routes, Route } from 'react-router-dom'

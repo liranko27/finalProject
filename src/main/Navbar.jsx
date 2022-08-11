@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../images/logo.png";
 import "../styles/navbar.css";
-import NavLinks from "./NavLinks";
-import CartMenu from "./CartMenu";
-import LoginForm from "./LoginForm";
-import HamburgerMenu from "./HamburgerMenu";
+import NavLinks from "../components/NavLinks";
+import CartMenu from "../components/CartMenu";
+import LoginForm from "../components/LoginForm";
+import HamburgerMenu from "../components/HamburgerMenu";
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from "react";
-import RegisterForm from "./RegisterForm";
+import RegisterForm from "../components/RegisterForm";
 import { Link } from "react-router-dom";
 
 function Navbar() {
