@@ -12,6 +12,7 @@ const def = {
     name: false,
     address: false,
     email: false,
+    success: false,
 }
 
 function MyProfile() {
@@ -26,6 +27,11 @@ function MyProfile() {
 
     function handleClick(e) {
         setOpen({ ...def, [e.target.id]: true })
+    }
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log(values[e.target.name])
+        setOpen({ ...def, ['success']: true })
     }
     return (
         <>
@@ -53,17 +59,20 @@ function MyProfile() {
                     </div> : ''}
                     {open.password ? <div className="change-password ">
                         <h2>change password</h2>
-                        {inputs.password.map(input => {
-                            return (
-                                <FormInput
-                                    key={input.id}
-                                    {...input}
-                                    value={values.password[input.name]}
-                                    onChange={(e) => handleChange(e, 'password')}
-                                />
-                            )
-                        })}
-                        <button>Save</button>
+                        <form name='password' onSubmit={handleSubmit}>
+
+                            {inputs.password.map(input => {
+                                return (
+                                    <FormInput
+                                        key={input.id}
+                                        {...input}
+                                        value={values.password[input.name]}
+                                        onChange={(e) => handleChange(e, 'password')}
+                                    />
+                                )
+                            })}
+                            <button>Save</button>
+                        </form>
                     </div> : ''}
                     {open.name ? <div className="change-name ">
                         <h2>change name and phone</h2>
@@ -106,6 +115,9 @@ function MyProfile() {
                             )
                         })}
                         <button>Save</button>
+                    </div> : ''}
+                    {open.success ? <div className="success">
+                        <h2>changed successfully</h2>
                     </div> : ''}
                 </div>
             </section>
