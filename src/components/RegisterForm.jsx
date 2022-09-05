@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../styles/MyForm.css";
 import "../styles/LoginForm.css";
 import { regInputs, regValues } from '../inputs/regFormInputs'
+import { Api } from "../DAL/api";
 function RegisterForm({ open, setOpen, login, setLogin }) {
 
   const [values, setValues] = useState(regValues);
@@ -12,11 +13,12 @@ function RegisterForm({ open, setOpen, login, setLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let output = "";
-    for (const input in values) {
-      output += `${input}: ${values[input]}\n`;
-    }
-    alert(output);
+    Api.register(values)
+    // let output = "";
+    // for (const input in values) {
+    //   output += `${input}: ${values[input]}\n`;
+    // }
+    // alert(output);
   };
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });

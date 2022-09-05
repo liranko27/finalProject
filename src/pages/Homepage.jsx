@@ -17,8 +17,9 @@ function Homepage() {
     }, [])
     async function sortByCategory(category, subCategory) {
         setProducts([])
-        const prods = await getData()
-        setProducts(prods.filter(product => product.category === category && product.brand === subCategory))
+        // const prods = await Api.getAllProducts()
+        Api.getAllProducts().then((prods) => setProducts(prods.filter(product => product.category === category && product.brand === subCategory)))
+
     }
     function sortProducts(key, dir) {
         setProducts([...products.sort((a, b) => {
@@ -55,12 +56,12 @@ function Homepage() {
 
                 </div>
 
+                <input type="radio" name="sort" id="all" onClick={() => {
+                    setProducts([])
+                    Api.getAllProducts().then(setProducts)
+                }} />
+                <label htmlFor='all'>Get all product</label>
             </div>
-            <input type="radio" name="sort" id="all" onClick={() => {
-                setProducts([])
-                getData().then(setProducts)
-            }} />
-            <label htmlFor='all'>Get all product</label>
             <section className="my-container">
                 <aside>
                     {categories.map(sub => {

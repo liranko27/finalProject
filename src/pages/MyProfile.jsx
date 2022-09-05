@@ -4,6 +4,9 @@ import WishCard from '../components/WishCard'
 import { useState } from 'react'
 import FormInput from '../components/FormInput'
 import { inputsArr, myValues } from '../inputs/myAccountInputs'
+import { useEffect } from 'react'
+import { Api } from '../DAL/api'
+import { Link } from 'react-router-dom'
 
 
 const def = {
@@ -18,7 +21,9 @@ const def = {
 function MyProfile() {
     const [open, setOpen] = useState(def)
     const [values, setValues] = useState(myValues)
+    const [wishlist, setWishlist] = useState([])
     const inputs = inputsArr()
+
     //set validation pattern to confirm password 
     inputs.password[2].pattern = values.password.password
 
@@ -35,6 +40,12 @@ function MyProfile() {
         setOpen({ ...def, success: true })
         setValues({ ...values, [e.target.value]: myValues[e.target.value] })
     }
+
+    useEffect(() => {
+        Api.getWishlist().then(setWishlist)
+    }, [wishlist])
+
+
     return (
         <>
             <section className="profile">
@@ -53,12 +64,8 @@ function MyProfile() {
 
                 <div className="profile-right">
                     {open.wish ? <div className="wishlist ">
-                        <WishCard amount={10} />
-                        <WishCard amount={0} />
-                        <WishCard amount={12} />
-                        <WishCard amount={5} />
-                        <WishCard amount={3} />
-                    </div> : ''}
+                        {wishlist.map(product => <WishCard key={product.id} amount={product?.unitInStock} product={product} wish={wishlist} remove={setWishlist} />)}
+                    </div> : ""}
                     {open.password ? <div className="change-password ">
                         <h2>change password</h2>
                         <form name='password' onSubmit={handleSubmit}>
