@@ -47,4 +47,45 @@ export class Api {
         const data = await resp.json()
         return data
     }
+    static async register(newCustomer) {
+        const customerInit = { ...newCustomer, id: 2, city: "", address: "", phone: "", zip_code: 1 }
+        delete customerInit.confirmPassword
+        const resp = await fetch('http://localhost:5001/login/register',
+            {
+                credentials: 'include',
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(customerInit)
+            }
+
+        )
+        const data = await resp.json()
+        return data
+    }
+    static async getWishlist() {
+        const resp = await fetch('http://localhost:5001/wishlist', { credentials: 'include' })
+        const data = await resp.json()
+        return data
+    }
+    static async addWishlist(product) {
+        const resp = await fetch('http://localhost:5001/wishlist', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: 'include',
+            body: JSON.stringify(product)
+        })
+        const data = await resp.json()
+        return data
+    }
+    static async removeFromWishlist(product) {
+        console.log(product)
+        const resp = await fetch('http://localhost:5001/wishlist', {
+            credentials: 'include',
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(product)
+        })
+        const data = await resp.json()
+        return data
+    }
 }

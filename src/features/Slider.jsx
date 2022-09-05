@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-
 function Slider({ images }) {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
@@ -16,10 +15,6 @@ function Slider({ images }) {
             src={img.imgSource}
             alt="First slide"
           />
-          {/* <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption> */}
         </Carousel.Item>
       })}
     </Carousel>

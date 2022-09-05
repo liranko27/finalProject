@@ -2,7 +2,7 @@ export function regInputs() {
     return [
         {
             id: 1,
-            name: "firstName",
+            name: "first_name",
             type: "text",
             placeholder: "First Name",
             label: "First Name",
@@ -13,7 +13,7 @@ export function regInputs() {
         },
         {
             id: 2,
-            name: "lastName",
+            name: "last_name",
             type: "text",
             placeholder: "Last Name",
             label: "Last Name",
@@ -59,8 +59,8 @@ export function regInputs() {
 
 export const regValues = {
     email: "",
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     password: "",
     confirmPassword: "",
 }

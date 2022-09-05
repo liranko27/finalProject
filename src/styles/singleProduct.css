@@ -48,9 +48,11 @@
 }
 
 .product-img img {
-    max-height: 350px;
+    max-height: 600px;
+    max-width: 600px;
     border-radius: 20px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .product-desc {
@@ -89,4 +91,14 @@
 .product-wish {
     background-color: var(--lightgray);
     color: var(--white);
+}
+
+.product .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.product .carousel-control-prev-icon {
+    background-color: black;
+    border-radius: 5px;
 }

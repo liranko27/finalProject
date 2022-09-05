@@ -12,10 +12,8 @@ function ProductPage() {
   const [images, setImages] = useState([])
   const { id } = useParams()
   useEffect(() => {
-
     Api.getProduct(id).then(setProduct)
     Api.getPhotos(id).then(setImages)
-
   }, [])// eslint-disable-line
   return (
     <>

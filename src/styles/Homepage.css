@@ -2,7 +2,7 @@
     margin-top: 10vh;
     height: 500px;
     width: 100%;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 
 .hero * {
@@ -62,4 +62,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin-left: 1rem;
+}
+
+.hero img {
+    object-fit: contain;
 }
