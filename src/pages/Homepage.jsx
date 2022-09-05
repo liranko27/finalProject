@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Homepage.css'
 import ProductCard from '../components/ProductCard'
-import { getData } from '../DAL/api'
+import { Api, getData } from '../DAL/api'
 import { useState, useEffect } from 'react'
 import categories from "../DAL/categories.json"
 import Category from '../components/Category'
@@ -10,8 +10,10 @@ import Spin from '../features/Spin'
 
 function Homepage() {
     const [products, setProducts] = useState([])
+    const [images, setImages] = useState([])
     useEffect(() => {
-        getData().then(setProducts)
+        Api.getAllProducts().then(setProducts)
+        Api.getAllPhotos().then(setImages)
     }, [])
     async function sortByCategory(category, subCategory) {
         setProducts([])
@@ -35,7 +37,7 @@ function Homepage() {
     return (
         <>
             <section className="hero">
-                <Slider />
+                <Slider images={images} />
             </section>
             <div className="sort">
                 <div>

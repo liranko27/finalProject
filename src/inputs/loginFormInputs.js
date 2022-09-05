@@ -2,13 +2,13 @@ export function loginInputs() {
     return [
         {
             id: 1,
-            name: "username",
-            type: "text",
-            placeholder: "Username",
-            label: "Username",
+            name: "email",
+            type: "email",
+            placeholder: "Email",
+            label: "Email",
             errorMessage:
-                "username should be 3-16 chars and not inclued speatial char",
-            pattern: "^[A-Za-z0-9]{3,16}$",
+                "should be a valid email",
+            pattern: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
             required: true,
         },
         {
@@ -27,6 +27,6 @@ export function loginInputs() {
 }
 
 export const loginValues = {
-    username: "",
+    email: "",
     password: "",
 }
