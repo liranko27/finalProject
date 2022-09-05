@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Api } from '../DAL/api'
 import '../styles/ProductCard.css'
 function ProductCard({ amount, product }) {
+    const [img, setImg] = useState([])
+
+    useEffect(() => {
+        Api.getPhotos(product.id).then(setImg)
+    }, [])// eslint-disable-line
+
     return (
         <div className="card">
-            <Link to="/productPage" className="card_img">
-                <img src={product.img} alt={product.name} />
+            <Link to={`product/${product.id}`} className="card_img">
+                <img src={img[0]?.imgSource} alt={product.name} />
             </Link>
             <p className="product_name">{product.productName}</p>
             <p className="product_des">description : {product.description}</p>

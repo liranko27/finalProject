@@ -1,31 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/singleProduct.css";
 import Slider from "../features/Slider";
 import Amount from "../features/Amount";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { Api } from "../DAL/api";
+import Spin from "../features/Spin";
 
 function ProductPage() {
+  const [product, setProduct] = useState(null)
+  const [images, setImages] = useState([])
+  const { id } = useParams()
+  useEffect(() => {
+
+    Api.getProduct(id).then(setProduct)
+    Api.getPhotos(id).then(setImages)
+
+  }, [])// eslint-disable-line
   return (
     <>
-      <main className="product">
+      {product ? <main className="product">
         <div className="product-img">
-          <Slider />
+          <Slider images={images} />
         </div>
         <div className="product-deatils">
-          <h2>Product Name</h2>
+          <h2>{product?.productName}</h2>
           <div className="product-desc">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-              nam, velit rem autem, minima voluptates at nulla quidem quibusdam
-              itaque ipsum? Corporis eaque, sapiente laborum rem dolorum fuga
-              minus adipisci exercitationem similique labore odit? Enim eaque
-              blanditiis facere in impedit quis corrupti distinctio illum iure
-              quisquam eius obcaecati molestiae magni officiis labore recusandae
-              odit, fugit sint quasi. Ex architecto, asperiores perspiciatis,?{" "}
+              {product?.description}
             </p>
             <div className="price-quanitiy">
               <h5>
-                Price: <span>20$</span>
+                Price: <span>{product?.unitPrice}$</span>
               </h5>
               <div className="amount-input">
                 <h5>Quantity</h5>
@@ -39,8 +45,9 @@ function ProductPage() {
             </div>
           </div>
         </div>
-      </main>
+      </main> : <Spin />}
     </>
+
   );
 }
 

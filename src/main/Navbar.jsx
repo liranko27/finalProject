@@ -10,11 +10,16 @@ import { useState } from "react";
 import RegisterForm from "../components/RegisterForm";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ loggedIn }) {
   const [openCart, setOpenCart] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
   const [signIn, setSingIn] = useState(false);
   const [hamburger, setHamburger] = useState(false)
+
+  const handleLogout = () => {
+    document.cookie = 'id=""'
+    window.location.href = 'http://localhost:3000'
+  }
 
   function openCartHamburger() {
     setHamburger(false)
@@ -50,9 +55,14 @@ function Navbar() {
             cart <span className="cart_amount">2</span>
           </div>
           <CartMenu open={openCart} />
-          <div className="signin" onClick={() => handleClick("login")}>
-            {false ? 'my account' : 'sign in/Register'}
-          </div>
+          {loggedIn ?
+            <>
+              <Link to={'myProfile'}>my profile</Link>
+              <a onClick={handleLogout}>logout</a>
+            </>
+            : <div className="signin" onClick={() => handleClick("login")}>
+              sign in/Register
+            </div>}
           {signIn ? (
             <RegisterForm
               open={openLogin}

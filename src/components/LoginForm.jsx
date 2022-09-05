@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../styles/MyForm.css";
 import "../styles/LoginForm.css";
 import { loginInputs, loginValues } from '../inputs/loginFormInputs'
+import { Api } from "../DAL/api";
 
 function LoginForm({ open, setOpen, login, setLogin }) {
   const [values, setValues] = useState(loginValues);
@@ -12,11 +13,8 @@ function LoginForm({ open, setOpen, login, setLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setOpen(false);
-    let output = "";
-    for (const input in values) {
-      output += `${input}: ${values[input]}\n`;
-    }
-    alert(output);
+    Api.login(values)
+    window.location.href = 'http://localhost:3000'// eslint-disable-next-line 
   };
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
